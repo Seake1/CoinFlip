@@ -1,0 +1,16 @@
+ul {
+  list-style: none;
+  width: 50%;
+}
+
+.list_container {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  margin: 2rem;
+}

@@ -1,13 +1,10 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Rubik", sans-serif;
+.stats {
+  text-align: right;
+  color: black;
+  font-weight: 500;
+  line-height: 25px;
 }
-body {
-  height: 100%;
-  background: linear-gradient(to right, blue 50%, white 50%) fixed;
-}
+
 .container {
   background-color: #ffff;
   width: 400px;
@@ -21,12 +18,7 @@ body {
   -webkit-perspective: 300px;
   perspective: 300px;
 }
-.stats {
-  text-align: right;
-  color: black;
-  font-weight: 500;
-  line-height: 25px;
-}
+
 .coin {
   height: 150px;
   width: 150px;
@@ -35,9 +27,7 @@ body {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-.coin img {
-  width: 145px;
-}
+
 .heads,
 .tails {
   position: absolute;
@@ -65,9 +55,9 @@ body {
   }
 }
 .buttons {
-  display: flex;
-  justify-content: space-between;
-}
+    display: flex;
+    justify-content: space-between;
+  }
 button {
   width: 120px;
   padding: 10px 0;
