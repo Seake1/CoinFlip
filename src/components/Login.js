@@ -1,25 +1,35 @@
+import "./Login.css";
+import { signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
+import googleButton from "../images/btn_google_signin_light_normal_web.png";
 import { auth } from "../firebase-config";
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 
-function Login({ setIsAuth }) {
-
+const Login = (props) => {
   const provider = new GoogleAuthProvider();
 
-  const signInWithGoogle = () => {
-    signInWithPopup(auth, provider).then((result) => {
-      localStorage.setItem("isAuth", true);
-      setIsAuth(true);
-    });
+  const signInWithGoogle = async () => {
+    signInWithPopup(auth, provider);
   };
+
+  const logOut = () => {
+    signOut(auth);
+  };
+
+  const signInButton = (
+    <img
+      className="img-button"
+      src={googleButton}
+      alt="Signin with Google."
+      onClick={signInWithGoogle}
+    />
+  );
+
+  const logOutButton = <button onClick={logOut}>Sign out</button>;
 
   return (
     <div className="loginPage">
-      <p>Sign In With Google to Continue</p>
-      <button className="login-with-google-btn" onClick={signInWithGoogle}>
-        Sign in with Google
-      </button>
+      {props.loggedIn ? logOutButton : signInButton}
     </div>
   );
-}
+};
 
 export default Login;

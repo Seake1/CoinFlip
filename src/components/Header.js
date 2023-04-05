@@ -14,7 +14,7 @@ const Header = (props) => {
         <h1>Game library</h1>
         <h2>{props.title}</h2>
       </div>
-      <div><Login/></div>
+      <div><Login loggedIn={props.loggedIn}/></div>
     </div>
   );
 };

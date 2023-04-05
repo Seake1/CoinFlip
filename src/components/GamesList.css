@@ -8,7 +8,7 @@ ul {
   justify-content: center;
 }
 
-img {
+.game_image {
   vertical-align: middle;
   width: 100px;
   height: 100px;
