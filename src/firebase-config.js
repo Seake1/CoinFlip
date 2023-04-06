@@ -1,21 +1,27 @@
-// Import the functions you need from the SDKs you need
+import { getDatabase } from "firebase/database"
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCyfX64pfAfPewUDdZfNdC-ShcxD5ldOrw",
-  authDomain: "coinflip-f2636.firebaseapp.com",
-  projectId: "coinflip-f2636",
-  storageBucket: "coinflip-f2636.appspot.com",
-  messagingSenderId: "144881821009",
-  appId: "1:144881821009:web:b2accfd39cc7c891961f70",
+
+  databaseURL: "https://games-6ced1-default-rtdb.europe-west1.firebasedatabase.app/",
+
+  apiKey: "AIzaSyDT8zVY6kfuVyzs72xVdCh4l3Z7YTCWLu0",
+
+  authDomain: "games-6ced1.firebaseapp.com",
+
+  projectId: "games-6ced1",
+
+  storageBucket: "games-6ced1.appspot.com",
+
+  messagingSenderId: "416050136986",
+
+  appId: "1:416050136986:web:bbf1e0ef5f617dbb3f5c23"
 };
 
 // Initialize Firebase
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 const auth = getAuth();
-export { auth };
+const database = getDatabase(app);
+export { auth, database };
