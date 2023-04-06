@@ -11,7 +11,6 @@
     "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
-    "firebase": "^2.4.2"
   },
   "scripts": {
     "start": "react-scripts start",
