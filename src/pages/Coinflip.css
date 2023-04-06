@@ -28,6 +28,11 @@
   transform-style: preserve-3d;
 }
 
+.coin img {
+  width: 145px;
+  height: 145px;
+}
+
 .heads,
 .tails {
   position: absolute;
