@@ -7,7 +7,7 @@ const Header = (props) => {
     <div className="header">
       <div>
         <Link to="/">
-          <button>Back</button>
+          <button type = "button" class = "button">Back</button>
         </Link>
       </div>
       <div>
